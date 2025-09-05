@@ -31,7 +31,7 @@ sec-prj-3_23/
 │
 ├─ device/ # Edge device simulation
 │ ├─ device.py # Simulates MCU boot, federation requests, mount
-│ ├─ provision.py# One-time creation of encrypted secure_data.enc
+│ ├─ provision.py # One-time creation of encrypted secure_data.enc
 │ └─ .env # Device configuration (ID, gateways, secrets)
 │
 ├─ gateway_a/ # Federation Gateway A
@@ -44,7 +44,6 @@ sec-prj-3_23/
 │
 ├─ split_key.py # Splits master key into two shares for gateways
 └─ README.md
-
 
 
 ---
