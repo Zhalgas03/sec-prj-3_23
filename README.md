@@ -63,6 +63,21 @@ The design increases resilience: no single node can decrypt the data alone.
    - Secure partition is decrypted and mounted.  
    - Events are logged and pushed to Telegram.  
 
+
+---
+
+## Screenshots
+
+**1. Running gateways** 
+![Device gateways](screenshots/gateways.png)
+
+**2. Running device**  
+![Running device](screenshots/device.png)
+
+**3. Telegram alerts from both gateways**  
+![Telegram alerts](screenshots/telegram.png)
+
+
 ---
 
 ## Goals & Relevance
