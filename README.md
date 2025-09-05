@@ -27,23 +27,20 @@ The design increases resilience: no single node can decrypt the data alone.
 ---
 
 ## Project Structure
-sec-prj-3_23/
-│
-├─ device/ # Edge device simulation
-│ ├─ device.py # Simulates MCU boot, federation requests, mount
-│ ├─ provision.py # One-time creation of encrypted secure_data.enc
-│ └─ .env # Device configuration (ID, gateways, secrets)
-│
-├─ gateway_a/ # Federation Gateway A
-│ ├─ app.py # FastAPI service, returns Share A
-│ └─ .env # Config: SITE_ID=A, Telegram, HMAC, allowed devices
-│
-├─ gateway_b/ # Federation Gateway B
-│ ├─ app.py # FastAPI service, returns Share B
-│ └─ .env # Config: SITE_ID=B, Telegram, HMAC, allowed devices
-│
-├─ split_key.py # Splits master key into two shares for gateways
-└─ README.md
+
+.  
+* [device](./device)  
+  * [device.py](./device/device.py)  
+  * [provision.py](./device/provision.py)  
+  * [.env](./device/.env)  
+* [gateway_a](./gateway_a)  
+  * [app.py](./gateway_a/app.py)  
+  * [.env](./gateway_a/.env)  
+* [gateway_b](./gateway_b)  
+  * [app.py](./gateway_b/app.py)  
+  * [.env](./gateway_b/.env)  
+* [split_key.py](./split_key.py)  
+* [README.md](./README.md)
 
 
 ---
