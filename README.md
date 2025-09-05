@@ -28,7 +28,6 @@ The design increases resilience: no single node can decrypt the data alone.
 
 ## Project Structure
 
-.  
 * [device](./device)  
   * [device.py](./device/device.py)  
   * [provision.py](./device/provision.py)  
