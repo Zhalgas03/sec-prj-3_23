@@ -2,7 +2,6 @@ import os, time, base64, hmac, hashlib, requests
 from dotenv import load_dotenv
 from pathlib import Path
 
-# 👇 ДОБАВЬ ЭТО: явно подгружаем device/.env
 load_dotenv(dotenv_path=Path("device/.env"))
 
 DEV_ID = os.getenv("DEVICE_ID", "esp32-001")

@@ -11,7 +11,7 @@ BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "")
 CHAT_ID   = os.getenv("TELEGRAM_CHAT_ID", "")
 ALLOWED   = set(d.strip() for d in os.getenv("ALLOWED_DEVICES","").split(",") if d.strip())
 HMAC_SECRET = os.getenv("HMAC_SECRET","").encode()
-SHARE_B64 = os.getenv("SHARE_B64","")   # <<-- ОБЯЗАТЕЛЬНО
+SHARE_B64 = os.getenv("SHARE_B64","")
 
 app = FastAPI(title=f"Federation Gateway {SITE_ID}")
 
@@ -51,7 +51,7 @@ def authorize(req: AuthReq):
     if not SHARE_B64:
         raise HTTPException(500, "SHARE_B64 not configured")
     tg_send(f"✅ AUTH_OK [{SITE_ID}]\n• dev: {req.dev_id}")
-    return {"ok": True, "site": SITE_ID, "share_b64": SHARE_B64}   # <<-- ВАЖНО
+    return {"ok": True, "site": SITE_ID, "share_b64": SHARE_B64} 
 
 @app.post("/event")
 def event(req: EventReq):
